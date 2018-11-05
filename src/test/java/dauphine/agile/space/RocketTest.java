@@ -131,8 +131,40 @@ public class RocketTest extends TestCase
     	assertNull("the escape pod is still attached to the rocket", rocket.getEscapePod());
     	assertEquals("the pilot is not in the escape pod", pilot,escapePod.getPilot());
     }
-  
+    
+    @Test
+    public void test1VomitBag() {
+    	Rocket rocket = new Rocket();
+    	Astronaut pilot = new Astronaut();
+    	rocket = new Rocket();
+    	rocket.enter(pilot);
+    	rocket.fill(15);
+    	rocket.takeOff();
+    	assertEquals("the cockpit should be clean", "clean", rocket.getCockpitState());
+    }
+    
+    @Test
+    public void test0VomitBag() {
+    	Rocket rocket = new Rocket(0);
+    	Astronaut pilot = new Astronaut();
+    	rocket.enter(pilot);
+    	rocket.fill(15);
+    	rocket.takeOff();
+    	assertEquals("the cockpit should be dirty", "dirty", rocket.getCockpitState());
+    }
+    
+    @Test
+    public void testCleanEngines() {
+    	Rocket rocket = new Rocket();
+    	Astronaut pilot = new Astronaut();
+    	rocket.enter(pilot);
+    	Engine engine = new Engine();
+    	rocket.addEngine(engine);
+    	rocket.fill(15);
+    	rocket.takeOff();
+    	assertEquals("the engine is not dirty after take off", "dirty", engine.getState());
+    	rocket.cleanEngine(0);
+    	assertEquals("the engine is not clean after cleaning", "clean", engine.getState());
+    }
+    
 }
-
-
-

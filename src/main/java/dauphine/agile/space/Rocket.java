@@ -15,15 +15,22 @@ public class Rocket
     private int fuel = 0;
     private int speed = 0;
     private List<Engine> engines;
+    private int remainingVomitBags = 1;
+    private String cockpitState = "clean";
     private EscapePod escapePod;
     private Astronaut pilot;
     
     /**
      * Constructor for objects of class Rocket
      */
-    public Rocket()
+    public Rocket(int nbVomitBags)
     {
         this(true);
+        this.remainingVomitBags = nbVomitBags;
+    }
+    
+    public Rocket() {
+    	this(1);
     }
     
     public Rocket(boolean withEscapePod) {
@@ -84,7 +91,15 @@ public class Rocket
         }
         fuel -= 10;
         speed +=10;
-        pilot.changeState("sick");        
+        pilot.changeState("sick");
+        if(remainingVomitBags > 0) {
+        	remainingVomitBags--;
+        	System.out.println("the pilot used a vomit bag, the cockpit is clean");
+        } else {
+        	cockpitState = "dirty";
+        	System.out.println("there is no vomit bag, the cockpit is now dirty");
+        }
+        engines.stream().forEach(e -> e.setState("dirty"));
     }
 
     public void emmergencyProtocol() {
@@ -97,7 +112,7 @@ public class Rocket
     		escapePod.eject();
     		escapePod = null;
     	} else {
-    		throw new RuntimeException("no escape pod ..");
+    		throw new IllegalStateException("no escape pod ..");
     	}
     }
     
@@ -109,4 +124,20 @@ public class Rocket
 		this.escapePod = escapePod;
 	}
 
+	public String getCockpitState() {
+		return cockpitState;
+	}
+	
+	public int getRemainingVomitBags() {
+		return remainingVomitBags;
+	}
+	
+	public void cleanEngine(int index) {
+		Engine e = engines.remove(index);
+		if(e != null) {
+			e.setState("clean");
+		} else {
+			System.out.println("there is no engine " + index);
+		}
+	}
 }
