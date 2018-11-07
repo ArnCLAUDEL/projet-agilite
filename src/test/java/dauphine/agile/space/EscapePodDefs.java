@@ -12,13 +12,40 @@ public class EscapePodDefs {
 	private Astronaut pilot;
 	private EscapePod escapePod;
 	
-	@Given("^a pilot in a rocket$")
-	public void a_pilot_in_a_rocket() throws Exception {
+	@Given("^a new rocket$")
+	public void a_new_rocket() throws Exception {
 	    // Write code here that turns the phrase above into concrete actions
-	    rocket = new Rocket();
-	    rocket.enter(pilot);
+		rocket = new Rocket(false);
+		rocket.fill(30);
+	}
+
+	@Given("^a pilot in the rocket$")
+	public void a_pilot_in_the_rocket() throws Exception {
+	    // Write code here that turns the phrase above into concrete actions
+		pilot = new Astronaut();
+		rocket.enter(pilot);
+	}
+
+	@Then("^the rocket sticks to ground$")
+	public void the_rocket_sticks_to_ground() throws Exception {
+	    // Write code here that turns the phrase above into concrete actions
+	    assertEquals("the rocket is moving but should not", 0, rocket.speed());
+	}
+	
+	@Given("^a pilot in new rocket with escapePod$")
+	public void a_pilot_in_new_rocket_with_escapePod() throws Exception {
+	    // Write code here that turns the phrase above into concrete actions
+	    a_new_rocket();
+	    a_pilot_in_the_rocket();
 	    escapePod = new EscapePod();
 	    rocket.setEscapePod(escapePod);
+	}
+	    
+	@Given("^a pilot in new rocket without escapePod$")
+	public void a_pilot_in_new_rocket_without_escapePod() throws Exception {
+	    // Write code here that turns the phrase above into concrete actions
+	    a_new_rocket();
+	    a_pilot_in_the_rocket();
 	}
 
 	@When("^the rocket takes off$")

@@ -12,13 +12,10 @@ import java.util.List;
 public class Rocket
 {
     // instance variables - replace the example below with your own
-    private int x;
     private int fuel = 0;
     private int speed = 0;
     private List<Engine> engines;
-    
     private EscapePod escapePod;
-    
     private Astronaut pilot;
     
     /**
@@ -26,9 +23,14 @@ public class Rocket
      */
     public Rocket()
     {
-        // initialise instance variables
-        x = 0;
-        engines = new ArrayList<>();
+        this(true);
+    }
+    
+    public Rocket(boolean withEscapePod) {
+    	engines = new ArrayList<>();
+    	if(withEscapePod) {
+    		escapePod = new EscapePod();
+    	}
     }
 
     public void addEngine(Engine engine) {
@@ -77,12 +79,12 @@ public class Rocket
     }
     
     public void takeOff() {
-        if(fuel < 10 || pilot == null) {
+        if(fuel < 10 || pilot == null || escapePod == null) {
             return;
         }
         fuel -= 10;
         speed +=10;
-        pilot.changeState("sick");
+        pilot.changeState("sick");        
     }
 
     public void emmergencyProtocol() {
@@ -106,5 +108,5 @@ public class Rocket
 	public void setEscapePod(EscapePod escapePod) {
 		this.escapePod = escapePod;
 	}
-    
+
 }

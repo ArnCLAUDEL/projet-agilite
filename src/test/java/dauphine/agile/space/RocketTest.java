@@ -131,6 +131,7 @@ public class RocketTest extends TestCase
     	assertNull("the escape pod is still attached to the rocket", rocket.getEscapePod());
     	assertEquals("the pilot is not in the escape pod", pilot,escapePod.getPilot());
     }
+  
 }
 
 
