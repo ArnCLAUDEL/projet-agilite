@@ -25,3 +25,16 @@ Les maitres possèdent un aligenement : lumineux ou obscur. Au cours de leur vie
 Leur alignement influe sur leur comportement : par exemple les maitres oscbures lancent des éclaires alors que les jedi entre en méditent...
 
 => Design pattern **state**
+
+## Next Steps
+
+* écrire les user stories et les tests d'acceptance (cucumber) -> Kévin en colaboration étroire avec barth et arnaud
+* implementer les deux design pattern:
+    * adapteur -> barth
+    * state -> arnaud
+* écrire un histoire fun (PDF) -> alex
+* soutenance
+
+
+Générateur star wars : https://starwarsintrocreator.kassellabs.io/
+
