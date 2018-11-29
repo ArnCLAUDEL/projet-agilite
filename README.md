@@ -16,5 +16,12 @@ L'idée a bien plu au JEDI... la NASA a remporté le contrat...
 
 ## Certification
 
-Le centre de certification distribue des **adapteurs* `Astronaut`->`Individu`, permettant à un `Individu`, qu'il soit `Jedi`, `Padawan` ou `Site` de piloter une fusée.
+Le centre de certification distribue des **adapteurs** `Astronaut`->`Individu`, permettant à un `Individu`, qu'il soit `Jedi`, `Padawan` ou `Site` de piloter une fusée.
 
+## Alignement de la force
+
+Les maitres possèdent un aligenement : lumineux ou obscur. Au cours de leur vie, leur aligement peut changer.
+
+Leur alignement influe sur leur comportement : par exemple les maitres oscbures lancent des éclaires alors que les jedi entre en méditent...
+
+=> Design pattern **state**
