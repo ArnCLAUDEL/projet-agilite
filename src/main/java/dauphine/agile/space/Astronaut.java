@@ -6,17 +6,25 @@ package dauphine.agile.space;
  * @author (your name)
  * @version (a version number or a date)
  */
-public class Astronaut
+public class Astronaut implements IAstronaut
 {
+    @Override
+    public void piloter(Rocket rocket)
+    {
+        rocket.takeOff();
+    }
+
     // instance variables - replace the example below with your own
     private String state = "calm";
 
-    public String state() {
+    public String state()
+    {
         return state;
     }
-    
-    public void changeState(String newState) {
+
+    public void changeState(String newState)
+    {
         this.state = newState;
     }
-    
+
 }
