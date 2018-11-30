@@ -18,7 +18,7 @@ public class Rocket
     private int remainingVomitBags = 1;
     private String cockpitState = "clean";
     private EscapePod escapePod;
-    private Astronaut pilot;
+    private IAstronaut pilot;
     
     /**
      * Constructor for objects of class Rocket
@@ -65,7 +65,7 @@ public class Rocket
     	return Collections.unmodifiableList(engines);
     }
     
-    public Astronaut pilot() {
+    public IAstronaut pilot() {
         return pilot;
     }
     

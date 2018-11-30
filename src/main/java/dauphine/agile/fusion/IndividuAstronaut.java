@@ -8,6 +8,7 @@ public class IndividuAstronaut implements IAstronaut
 {
 
     private final IIndividu individu;
+    private String state = "calm";
 
     public IndividuAstronaut(IIndividu individu) {
         super();
@@ -20,5 +21,15 @@ public class IndividuAstronaut implements IAstronaut
         individu.sePreparer();
         individu.agir();
     }
-
+    
+    @Override
+    public String state() {
+        return state;
+    }
+    
+    @Override
+    public void changeState(String newState) {
+        this.state = newState;
+    }
+    
 }

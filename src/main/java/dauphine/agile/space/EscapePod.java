@@ -2,17 +2,17 @@ package dauphine.agile.space;
 
 public class EscapePod {
 
-	private Astronaut pilot;
+	private IAstronaut pilot;
 
 	public void eject() {
 		System.out.println("escape pod ejected");
 	}
 	
-	public Astronaut getPilot() {
+	public IAstronaut getPilot() {
 		return pilot;
 	}
 
-	public void setPilot(Astronaut pilot) {
+	public void setPilot(IAstronaut pilot) {
 		this.pilot = pilot;
 	}
 	

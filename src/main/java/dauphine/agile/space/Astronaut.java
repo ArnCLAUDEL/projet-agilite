@@ -17,11 +17,13 @@ public class Astronaut implements IAstronaut
     // instance variables - replace the example below with your own
     private String state = "calm";
 
+    @Override
     public String state()
     {
         return state;
     }
 
+    @Override
     public void changeState(String newState)
     {
         this.state = newState;
