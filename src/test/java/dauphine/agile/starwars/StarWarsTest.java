@@ -6,10 +6,10 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-class StarWarsTest {
+public class StarWarsTest {
 
 	@Test
-	void testGetterIndividu() {
+	public void testGetterIndividu() {
 
 		Individu anakin = new Individu("Skywalker", "Anakin", "Jedi");
 
@@ -30,7 +30,7 @@ class StarWarsTest {
 	}
 
 	@Test
-	void testGetterMaitre() {
+	public void testGetterMaitre() {
 
 		Maitre anakin = new Maitre("Skywalker", "Anakin", "Jedi");
 
@@ -41,7 +41,7 @@ class StarWarsTest {
 	}
 
 	@Test
-	void testGetterPadawan() {
+	public void testGetterPadawan() {
 
 		Padawan ashoka = new Padawan("Tano", "Ashoka", "Jedi");
 
@@ -52,7 +52,7 @@ class StarWarsTest {
 	}
 
 	@Test
-	void testAge() {
+	public void testAge() {
 
 		Individu i = new Individu("Tano", "Ashoka", "Jedi");
 
@@ -62,8 +62,7 @@ class StarWarsTest {
 	}
 
 	@Test
-
-	void testListPadawanMaitre() {
+	public void testListPadawanMaitre() {
 
 		Maitre yoda = new Maitre("Yoda", "Yoda", "Jedi");
 
@@ -89,8 +88,7 @@ class StarWarsTest {
 	// cela on a redefinir la m�thode equals de maitre
 
 	@Test
-
-	void testIdentiteMaitre() {
+	public void testIdentiteMaitre() {
 
 		Maitre yoda = new Maitre("Yoda", "Yoda", "Jedi");
 		Maitre yoda1 = new Maitre("Yoda", "Yidi", "Jedi");
@@ -105,7 +103,7 @@ class StarWarsTest {
 
 	// On rajoute un nouveau maitre
 	@Test
-	void testAjoutMaitre() {
+	public void testAjoutMaitre() {
 		Padawan toto = new Padawan("toto", "toto", "Jedi");
 		Maitre yoda = new Maitre("Yoda", "Yoda", "Jedi");
 		Maitre yoda1 = new Maitre("Yoda", "Yidi", "Jedi");
@@ -116,7 +114,6 @@ class StarWarsTest {
 	}
 
 	@Test
-
 	public void someTest() {
 
 		// assertThrows(IllegalArgumentException.class, () -> {
@@ -126,8 +123,8 @@ class StarWarsTest {
 		try {
 			Individu i = new Individu("toto", "toto", "Jedi");
 			i.setAge(-5);
+			assertTrue("should have throws an IllegalArgumentException", false);
 		} catch (Exception e) {
-			assertTrue(false);
 		}
 	}
 
