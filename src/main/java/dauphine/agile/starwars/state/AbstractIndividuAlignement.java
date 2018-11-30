@@ -1,14 +1,13 @@
 package dauphine.agile.starwars.state;
 
-import dauphine.agile.starwars.IIndividu;
-
-public abstract class AbstractIndividuAlignement implements IIndividu
+public abstract class AbstractIndividuAlignement
 {
-
-    @Override
+    public abstract void sePreparer();
+    
+    public abstract void agir();
+    
     public void faireDuSport()
     {
         System.out.println("Fais un footing pour s'exercer");
     }
-
 }
