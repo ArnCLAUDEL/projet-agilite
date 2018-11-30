@@ -4,13 +4,13 @@ import dauphine.agile.space.IAstronaut;
 import dauphine.agile.space.Rocket;
 import dauphine.agile.starwars.IIndividu;
 
-public class IndividuAstronaut implements IAstronaut
+public class IndividuAstronautAdapter implements IAstronaut
 {
 
     private final IIndividu individu;
     private String state = "calm";
 
-    public IndividuAstronaut(IIndividu individu) {
+    public IndividuAstronautAdapter(IIndividu individu) {
         super();
         this.individu = individu;
     }
