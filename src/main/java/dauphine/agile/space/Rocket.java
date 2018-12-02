@@ -69,7 +69,7 @@ public class Rocket
         return pilot;
     }
     
-    public void enter(Astronaut pilot) {
+    public void enter(IAstronaut pilot) {
         this.pilot = pilot;
     }
     

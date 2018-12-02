@@ -2,11 +2,11 @@ package dauphine.agile.starwars;
 
 public interface IIndividu
 {
-    void faireDuSport();
+    String faireDuSport();
     
-    void sePreparer();
+    String sePreparer();
     
-    void agir();
+    String agir();
     
     int getAge();
     
