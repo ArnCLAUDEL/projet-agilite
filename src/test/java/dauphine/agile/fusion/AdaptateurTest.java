@@ -4,7 +4,6 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import dauphine.agile.space.Astronaut;
 import dauphine.agile.space.EscapePod;
 import dauphine.agile.space.IAstronaut;
 import dauphine.agile.space.Rocket;

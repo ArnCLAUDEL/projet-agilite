@@ -55,6 +55,14 @@ public class Maitre extends Individu {
 
 	// Red�finir les �quals
 
+	public AbstractIndividuAlignement getAlignement() {
+		return alignement;
+	}
+
+	public void setAlignement(AbstractIndividuAlignement alignement) {
+		this.alignement = alignement;
+	}
+
 	@Override
 	public boolean equals(Object test1) {
 		if (test1 == null)
