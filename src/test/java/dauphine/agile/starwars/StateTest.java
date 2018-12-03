@@ -1,4 +1,4 @@
-package dauphine.agile.fusion;
+package dauphine.agile.starwars;
 
 import static org.junit.Assert.*;
 
