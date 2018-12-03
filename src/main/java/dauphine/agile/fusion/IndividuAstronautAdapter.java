@@ -20,6 +20,7 @@ public class IndividuAstronautAdapter implements IAstronaut
     {
         individu.sePreparer();
         individu.agir();
+        rocket.takeOff();
     }
     
     @Override
@@ -29,7 +30,11 @@ public class IndividuAstronautAdapter implements IAstronaut
     
     @Override
     public void changeState(String newState) {
-        this.state = newState;
+        if("sick".equals(newState)) {
+        	System.out.println("un individu utilisateur de la force n'est jamais malade !");
+        } else {
+    	this.state = newState;
+        }
     }
     
 }
