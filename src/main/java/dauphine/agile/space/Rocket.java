@@ -91,13 +91,14 @@ public class Rocket
         }
         fuel -= 10;
         speed +=10;
-        pilot.changeState("sick");
-        if(remainingVomitBags > 0) {
-        	remainingVomitBags--;
-        	System.out.println("the pilot used a vomit bag, the cockpit is clean");
-        } else {
-        	cockpitState = "dirty";
-        	System.out.println("there is no vomit bag, the cockpit is now dirty");
+        if(pilot.changeState("sick")) {
+	        if(remainingVomitBags > 0) {
+	        	remainingVomitBags--;
+	        	System.out.println("the pilot used a vomit bag, the cockpit is clean");
+	        } else {
+	        	cockpitState = "dirty";
+	        	System.out.println("there is no vomit bag, the cockpit is now dirty");
+	        }
         }
         engines.stream().forEach(e -> e.setState("dirty"));
     }

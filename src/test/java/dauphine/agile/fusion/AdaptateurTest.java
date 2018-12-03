@@ -20,7 +20,7 @@ public class AdaptateurTest {
 
 		// Yoda passe la formation
 		CentreDeCertification.delivrer(yoda);
-		Rocket xwing = new Rocket();
+		Rocket xwing = new Rocket(0);
 		IAstronaut yodaAstronaut = CentreDeCertification.delivrer(yoda);
 
 		/**
@@ -29,8 +29,11 @@ public class AdaptateurTest {
 		EscapePod escapePod = new EscapePod();
 		xwing.enter(yodaAstronaut);
 		xwing.setEscapePod(escapePod);
+		xwing.fill(100);
 		yodaAstronaut.piloter(xwing);
 		assertEquals("calm", yodaAstronaut.state());
+		assertEquals("clean", xwing.getCockpitState());
+		assertEquals(0, xwing.getRemainingVomitBags());
 
 	}
 

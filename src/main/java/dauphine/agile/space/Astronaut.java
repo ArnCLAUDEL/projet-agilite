@@ -24,9 +24,10 @@ public class Astronaut implements IAstronaut
     }
 
     @Override
-    public void changeState(String newState)
+    public boolean changeState(String newState)
     {
         this.state = newState;
+        return true;
     }
 
 }

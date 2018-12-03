@@ -6,5 +6,5 @@ public interface IAstronaut
     
     String state();
     
-    void changeState(String newState);
+    boolean changeState(String newState);
 }

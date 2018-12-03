@@ -29,11 +29,13 @@ public class IndividuAstronautAdapter implements IAstronaut
     }
     
     @Override
-    public void changeState(String newState) {
+    public boolean changeState(String newState) {
         if("sick".equals(newState)) {
         	System.out.println("un individu utilisateur de la force n'est jamais malade !");
+        	return false;
         } else {
-    	this.state = newState;
+        	this.state = newState;
+        	return true;
         }
     }
     
