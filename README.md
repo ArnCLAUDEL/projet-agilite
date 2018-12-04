@@ -22,8 +22,7 @@ spark of hope to the fight with his Stormtroopers’ code manipulating ability.
 
 But the Resistance has been exposed. As the V Cycle imposes the dominance of its space
 fleet and monopolises all the construction ressources, the Resistance’s wise Jedi Masters
-and their loyal Padawans look for a partner to produce spaceships, one that is not ally of the
-Republic…
+and their loyal Padawans look for a partner to produce spaceships, one that is not ally of the V Cycle…
 
 The NASA, a peaceful Terran organisation led by the erudite Dr. Alex, responds to their call
 for help and decides to set up a training center that will issue certification of piloting its
