@@ -1,19 +1,23 @@
 # AGILE GALAXY
 
+## Rapport
+
+Un rapport validé par le conseil de Jedi se trouve à la racine du dépôt git sous le nom de **rapport.pdf**
+
 ## Histoire
 
 Générateur générique star wars : https://starwarsintrocreator.kassellabs.io/
 
-Rubrique 1 : A long time ago in a galaxy far,
+A long time ago in a galaxy far,
 far away....
 
-Rubrique 2 : AGILE GALAXY
+GALAXY
 
-Rubrique 3 : Episode I
+Episode I
 
-Rubrique 4 : The SCRUM MASTER
+The SCRUM MASTER
 
-Rubrique 5 : The V Cycle reigns. Having decimated the peaceful Republic, Supreme
+The V Cycle reigns. Having decimated the peaceful Republic, Supreme
 Leader Zam now deploys his merciless legions to seize military control of the galaxy.
 
 Only virtuous Princes Bart & Arnaud's band of Resistance fighters stand against the rising
